@@ -1,0 +1,28 @@
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A Django Website">
+        <meta name="keywords" content="Django, Website">
+        <title>
+            Django -
+            {% block subtitle %}
+                web
+            {% endblock subtitle %}
+        </title>
+    </head>
+
+    <body>
+        <div class="container mt-3">
+            {% bootstrap_messages %}
+
+            {% block body %}
+            {% endblock body %}
+        </div>
+
+        {% bootstrap_javascript %}
+    </body>
+</html>
